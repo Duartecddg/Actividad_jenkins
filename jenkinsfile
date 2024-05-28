@@ -1,26 +1,29 @@
 pipeline {
     agent any
+    
     stages {
         stage('Build') {
             steps {
                 echo 'Building...'
-                // Install dependencies and build your Node.js application
-                sh 'npm install'  // Instala las dependencias si es necesario
-                sh 'node index.js > output.log 2>&1 &'  // Inicia tu aplicación Node.js en segundo plano
+                // Aquí podrías ejecutar comandos de compilación si los necesitas
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                // Run automated tests for your Node.js application
-                sh 'npm test'
+                // Aquí podrías ejecutar tus pruebas automatizadas
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Deploy your Node.js application to the server
-                // Example: scp files to server, restart services, etc.
+                // Aquí podrías implementar tu aplicación en un servidor
+            }
+        }
+        stage('Start Server') {
+            steps {
+                // Iniciar el servidor Node.js en segundo plano usando 'npm start'
+                bat 'npm start'
             }
         }
     }
@@ -30,7 +33,6 @@ pipeline {
         }
         failure {
             echo '========pipeline execution failed========'
-            // Add additional failure handling and notifications here
         }
     }
 }
