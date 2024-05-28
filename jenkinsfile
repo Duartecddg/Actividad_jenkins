@@ -4,10 +4,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                dir('C:/Users/User/Documents/GitHub/Actividad_jenkins') {
-                    sh 'npm install'  // Instala las dependencias si es necesario
-                    sh 'node app.js &'  // Inicia tu aplicación Node.js en segundo plano
-                }
+            
+                sh 'npm install'  // Instala las dependencias si es necesario
+                sh 'node app.js &'  // Inicia tu aplicación Node.js en segundo plano
+               
             }
         }
         stage('Test') {
