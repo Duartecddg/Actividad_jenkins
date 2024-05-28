@@ -6,7 +6,7 @@ pipeline {
                 echo 'Building...'
                 // Install dependencies and build your Node.js application
                 sh 'npm install'  // Instala las dependencias si es necesario
-                sh 'node index.js &'  // Inicia tu aplicación Node.js en segundo plano
+                sh 'node index.js > output.log 2>&1 &'  // Inicia tu aplicación Node.js en segundo plano
             }
         }
         stage('Test') {
