@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" id="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Cuestionario</title>
+</head>
+<body >
+
+    <nav id="nav_style">
+        <button id="diseño1">Diseño Estándar</button>
+        <button id="diseño2">Diseño Accesible</button>
+    </nav>
+
+    <div class="container">
+
+        <div class="datos">
+            <input type="text" class="obligatorio" placeholder="Nombre de Usuario" title="name" name="name"/> <a href="detalles.html#seccion"></a><br>
+            
+            <input type="password" class="obligatorio" placeholder="Contraseña" title="password" name="password"/><br>
+            
+            <input type="password" class="obligatorio" placeholder="Repita Contraseña" title="password2" name="password2"/><br>
+            
+            <input type="text" class="obligatorio" placeholder="Dirección" title="direccion" name="direccion"/><br>
+            
+            <input type="text" class="obligatorio" placeholder="Ciudad" title="city" name="city"/><br>
+            
+            <input type="text" class="obligatorio" placeholder="Provincia" title="provivencia" name="provivencia"/><br>
+           
+            <input type="number" class="obligatorio" placeholder="Número de Huéspedes" title="numhuesped" name="numhuesped"/><br>
+        </div>
+
+        <h3>Servicios: <a href="detalles.html#seccion2"> (Justificación Sección 2)</a></h3>
+
+        <div class="checkbox-group">
+            <input type="checkbox" name="aircondicionado" id="aircondicionado" value="aircondicionado">
+            <label for="aircondicionado">Aire acondicionado</label><br>
+            <input type="checkbox" name="cajafuerte" id="cajafuerte">
+            <label for="cajafuerte">Caja fuerte</label><br>
+            <input type="checkbox" name="minibar" id="minibar">
+            <label for="minibar">Minibar</label><br>
+            <input type="checkbox" name="conexion" id="conexion">
+            <label for="conexion">Conexión a internet</label><br>
+            <input type="checkbox" name="almuada" id="almuada">
+            <label for="almuada">Almohadas a la carta</label><br>
+            <input type="checkbox" name="detectorhumo" id="detectorhumo">
+            <label for="detectorhumo">Detector de humos</label><br>
+            <input type="checkbox" name="mesatrabajo" id="mesatrabajo">
+            <label for="mesatrabajo">Mesa de trabajo</label><br>
+            <input type="checkbox" name="wifi" id="wifi">
+            <label for="wifi">WIFI</label>
+        </div>
+
+        <h3 class="obligatorio">Tipo de Habitación: &nbsp;
+            <select name="tipohabitacion" id="tipohabitacion">
+                <option id="individual" value="individual">Individual</option>
+                <option id="doble" value="doble">Doble</option>
+                <option id="suite" value="suite">Suite</option>
+            </select>
+            &nbsp;
+            Pensión: &nbsp;
+            <select name="pension" id="pension">
+                <option id="alojamiento" value="alojamiento">Alojamiento</option>
+                <option id="desayuno" value="desayuno">Desayuno</option>
+                <option id="media" value="media">Media</option>
+                <option id="completa" value="completa">Completa</option>
+            </select>
+            <a href="detalles.html#seccion"> (Justificación Sección 3)</a>
+        </h3>
+
+        <div class="comment-section">
+            <h3>Comentario o Sugerencia: <a href="detalles.html#seccion4"> (Justificación Sección 4)</a></h3>
+            <textarea rows="5" cols="50"></textarea><br>
+            Email:
+            <input type="email" name="email" id="email">
+            Acepto la privacidad: <input type="checkbox" name="politica" id="politica"> 
+        </div>
+
+        <div class="button-group">
+            <input type="submit" value="Aceptar" title="aceptar">
+            <input type="button" value="Limpiar" title="limpiar">
+        </div>
+    </div>
+</body>
+</html>

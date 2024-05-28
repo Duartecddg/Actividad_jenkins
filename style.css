@@ -1,0 +1,138 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: crosshair;
+    color: #333;
+    font-size: 16px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.hero {
+    background-color: #f2f2f2;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    cursor: text;
+}
+
+/* Estilos específicos del formulario de reserva */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.datos {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.datos h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.datos input[type="text"],
+.datos input[type="password"],
+.datos input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.datos input[type="text"]:focus,
+.datos input[type="password"]:focus,
+.datos input[type="number"]:focus {
+    border-color: #4CAF50;
+}
+
+.obligatorio {
+    color: red;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.comment-section textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.button-group input[type="submit"],
+.button-group input[type="button"] {
+  
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px; 
+    min-width: 120px;
+}
+
+.button-group input[type="submit"]:hover,
+.button-group input[type="button"]:hover {
+    background-color: #45a049;
+}
+::placeholder{
+    color: red;
+}
+
+
+#nav_style {
+    background-color: #0078D7;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+#nav_style button {
+    background-color: #FFFFFF;
+    color: #0078D7;
+    border: 2px solid #0078D7;
+    padding: 8px 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+#nav_style button:hover {
+    background-color: #0078D7;
+    color: #FFFFFF;
+}
