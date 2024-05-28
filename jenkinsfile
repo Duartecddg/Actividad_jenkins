@@ -4,20 +4,22 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-            
-                sh 'npm install'  // Instala las dependencias si es necesario
-                sh 'node app.js &'  // Inicia tu aplicación Node.js en segundo plano
-               
+                // Install dependencies and build your Node.js application
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
+                // Run automated tests for your Node.js application
+                sh 'npm test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+                // Deploy your Node.js application to the server
+                // Example: scp files to server, restart services, etc.
             }
         }
     }
@@ -27,6 +29,7 @@ pipeline {
         }
         failure {
             echo '========pipeline execution failed========'
+            // Add additional failure handling and notifications here
         }
     }
 }
