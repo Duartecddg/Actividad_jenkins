@@ -1,28 +1,24 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Build') {
             steps {
                 echo 'Building...'
-                // Aquí podrías ejecutar comandos de compilación si los necesitas
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                // Aquí podrías ejecutar tus pruebas automatizadas
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Aquí podrías implementar tu aplicación en un servidor
             }
         }
         stage('Start Server') {
             steps {
-                // Iniciar el servidor Node.js en segundo plano usando 'npm start'
                 bat 'npm start'
             }
         }
