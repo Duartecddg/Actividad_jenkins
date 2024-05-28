@@ -1,23 +1,31 @@
 pipeline {
     agent any
+
     stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from your Git repository
+                git 'https://github.com/Duartecddg/Actividad_jenkins.git'
+            }
+        }
+
         stage('Build') {
             steps {
-                echo 'Building...'
-                sh node -v
+                // Install dependencies and build your Node.js application
+                sh 'npm install'
+                sh 'npm run build'
+                
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-            }
-        }
+
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                // Deploy your Node.js application
+                sh 'npm start & node index.js'
             }
         }
     }
+
     post {
         always {
             echo '========always========'
