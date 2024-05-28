@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8080;
+const port = 3030;
 
 // Configurar Express para servir archivos estáticos desde la carpeta 'public'
 app.use(express.static('public'));
